@@ -1,0 +1,2 @@
+#!/bin/bash
+/home/courses/ele428/bin/getLab4.pl `whoami`

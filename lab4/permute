@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# This script is a wrapper for the permute program.  We have presently
+# (March 22, 2016) two types of systems Solaris sparc and Linux.  
+# Eventually there will be no sparc systems left so we need a transition
+# wrapper so that if the permute program for the coe428 course is
+# run on a sparc system it will run the sparc binary if it's run
+# on a linux system it will run the linux version.
+#
+# Author: Jason Naughton, Augest 26, 2003
+#
+OS=`uname -s`;
+BASE="/home/courses/coe428/bin";
+
+if [ "$OS" = "Linux" ]
+then
+     $BASE/permute.x86 $*
+else
+     $BASE/submit.sol $*
+fi

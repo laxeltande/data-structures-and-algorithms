@@ -1,0 +1,46 @@
+
+1. Summary of Accomplishments:
+
+Implemented Insertion Sort and Merge Sort algorithms in C.
+Created a single mySort function for each sorting algorithm as per project requirements.
+Ensured that the sorting functions respect the provided metrics framework for counting comparisons, swaps, and copies.
+
+2. Parts Not Completed or Known Bugs:
+After entering input Ctrl+D signals the end of input. However, this causes a small error in output.
+After the smallest number, a D is printed. This does not interfere with the sorting and numbers are
+still sorted correctly other than this.
+
+3. Analysis of Sorting Algorithms:
+
+Insertion Sort:
+
+Best Case: O(n) - When the array is already sorted, Insertion Sort makes only n comparisons and 0 swaps.
+Average Case: O(n^2) - Generally, it has quadratic time complexity due to nested loops for comparisons and swaps.
+Worst Case: O(n^2) - Occurs when the array is in reverse order, resulting in the maximum number of comparisons and swaps.
+
+Merge Sort:
+
+Best Case: O(n log n) - Merge Sort always divides the array into two halves and recursively sorts them, resulting in a log n factor.
+Average Case: O(n log n) - Similar to the best case, as Merge Sort maintains a balanced tree structure during recursion.
+Worst Case: O(n log n) - Even in the worst case, Merge Sort maintains a consistent time complexity due to its divide-and-conquer strategy.
+
+Equations for Metrics:
+
+Let n be the number of elements in the array.
+Let C be the number of comparisons, M be the number of moves (copies), and S be the number of swaps.
+
+
+Insertion Sort Metrics:
+
+Best Case: C(n) = n, M(n) = 0, S(n) = 0
+Average Case: C(n) = (n^2), M(n) = 3n^2 / 2 + 3n / 2 - 1, S(n) = n^2 
+Worst Case: C(n) = (n^2), M(n) = 3n^2 / 2 + 3n / 2 - 1, S(n) = n^2 
+
+
+Merge Sort Metrics:
+
+All Cases: C(n) = n log(n), M(n) = 3n log(n), S(n) = n log(n)
+
+
+
+
