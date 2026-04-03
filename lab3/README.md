@@ -1,43 +1,108 @@
+# Lab 3 – Sorting Algorithms and Performance Analysis
 
-1. Summary of Accomplishments:
+## Overview
+
+This project implements and compares two sorting algorithms: insertion sort and merge sort. The goal is to understand how algorithm design impacts performance and scalability.
+
+---
+
+## Implementation
+
+Two sorting algorithms are implemented:
+
+### Insertion Sort
+- Iterative approach
+- Builds the sorted portion of the array one element at a time
+
+### Merge Sort
+- Divide-and-conquer approach
+- Recursively splits the array into halves
+- Merges sorted subarrays
+
+---
+
+## Technical Explanation
+
+Insertion sort works by inserting each element into its correct position within the sorted portion of the array.
+
+Merge sort operates in three steps:
+
+1. Divide the array into two halves
+2. Recursively sort each half
+3. Merge the sorted halves into a final sorted array
+
+The merge step is critical and ensures that elements are combined in sorted order.
+
+---
+
+## Time Complexity
+
+### Insertion Sort
+- Best Case: **O(n)**
+- Worst Case: **O(n^2)**
+- Average Case: **O(n^2)**
+
+### Merge Sort
+- Best Case: **O(n log n)**
+- Worst Case: **O(n log n)**
+- Average Case: **O(n log n)**
+
+---
+
+## Key Insight
+
+Insertion sort is efficient for small or nearly sorted datasets due to low overhead.
+
+Merge sort is more efficient for large datasets because it reduces the number of comparisons through divide-and-conquer.
+
+---
+
+## How to Run
+
+```bash
+make
+./sortDriver
+```
+
+## 1. Summary of Accomplishments:
 
 Implemented Insertion Sort and Merge Sort algorithms in C.
 Created a single mySort function for each sorting algorithm as per project requirements.
 Ensured that the sorting functions respect the provided metrics framework for counting comparisons, swaps, and copies.
 
-2. Parts Not Completed or Known Bugs:
+## 2. Parts Not Completed or Known Bugs:
 After entering input Ctrl+D signals the end of input. However, this causes a small error in output.
 After the smallest number, a D is printed. This does not interfere with the sorting and numbers are
 still sorted correctly other than this.
 
-3. Analysis of Sorting Algorithms:
+## 3. Analysis of Sorting Algorithms:
 
-Insertion Sort:
+###Insertion Sort:
 
 Best Case: O(n) - When the array is already sorted, Insertion Sort makes only n comparisons and 0 swaps.
 Average Case: O(n^2) - Generally, it has quadratic time complexity due to nested loops for comparisons and swaps.
 Worst Case: O(n^2) - Occurs when the array is in reverse order, resulting in the maximum number of comparisons and swaps.
 
-Merge Sort:
+### Merge Sort:
 
 Best Case: O(n log n) - Merge Sort always divides the array into two halves and recursively sorts them, resulting in a log n factor.
 Average Case: O(n log n) - Similar to the best case, as Merge Sort maintains a balanced tree structure during recursion.
 Worst Case: O(n log n) - Even in the worst case, Merge Sort maintains a consistent time complexity due to its divide-and-conquer strategy.
 
-Equations for Metrics:
+### Equations for Metrics:
 
 Let n be the number of elements in the array.
 Let C be the number of comparisons, M be the number of moves (copies), and S be the number of swaps.
 
 
-Insertion Sort Metrics:
+## Insertion Sort Metrics:
 
 Best Case: C(n) = n, M(n) = 0, S(n) = 0
 Average Case: C(n) = (n^2), M(n) = 3n^2 / 2 + 3n / 2 - 1, S(n) = n^2 
 Worst Case: C(n) = (n^2), M(n) = 3n^2 / 2 + 3n / 2 - 1, S(n) = n^2 
 
 
-Merge Sort Metrics:
+## Merge Sort Metrics:
 
 All Cases: C(n) = n log(n), M(n) = 3n log(n), S(n) = n log(n)
 
